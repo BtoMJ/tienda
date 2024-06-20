@@ -1,0 +1,21 @@
+.news-container{
+    width: 100vw;
+    height: 70vh;
+    background-color: #FFFFFF;
+}
+
+.news-container h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.news-container .products-container{
+    width: 60vw;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* border: thin dotted #F0F; */
+}
+

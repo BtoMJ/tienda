@@ -1,0 +1,99 @@
+.footer-container{
+    width: 100vw;
+    height: 25vh;
+    color: #FFFFFF;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container .general{
+    width: 70vw;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container .general h4{
+    color: #C8000C;
+    font-weight: 500;
+}
+
+
+.footer-container .company{
+    width: 17vw;
+    /* border: thin dotted #f0f; */
+}
+
+.footer-container .company .logo-footer{
+    height: 40px;
+}
+
+.footer-container .company p{
+    width: 80%;
+    color: #FFFFFF;
+    font-size: .75rem;
+    font-weight: 300;
+}
+
+.footer-container .general .menu-products,
+.footer-container .general .menu-sections,
+.footer-container .general .menu-stores{
+    width: 7vw;
+    display: flex;
+    flex-direction: column;
+    /* border: thin dotted #f0f; */
+}
+
+.footer-container .general .menu-products ul,
+.footer-container .general .menu-sections ul,
+.footer-container .general .menu-stores ul{
+    font-size: .8rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-container .general a{
+    transition: .5s all ease-in-out;
+}
+
+.footer-container .general a:hover{
+    transform: scale(1.1);
+    color: #C8000C;
+}
+
+.footer-container .general .social-media-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* border: thin dotted #f0f; */
+}
+
+.footer-container .general .social-media-container .icon{
+    font-size: 1.7rem;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: .5s all ease-in-out;
+}
+
+.footer-container .general .social-media-container .icon:hover{
+    transform: scale(1.1);
+    color: #C8000C;
+}
+
+.footer-container .sign{
+    width: 50vw;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}

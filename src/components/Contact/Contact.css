@@ -1,0 +1,68 @@
+.contact-container{
+    width: 100vw;
+    height: 80vh;
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container .wallpaper-contact{
+    width: 40vw;
+    height: 500px;
+    padding: 0 4vw;
+    background-image: url("../../assets/pumasneakers.jpg");
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.contact-container .form-container{
+    width: 35vw;
+    padding: 0 3vw;
+}
+
+.contact-container .form-container h2{
+   font-size: 2rem;
+}
+
+.contact-container .form-container p{
+   margin-bottom: 20px;
+}
+
+.contact-container .form-container .form-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.contact-container .form-container .form-contact .input-form{
+    margin: 15px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+}
+
+.contact-container .form-container .form-contact .textarea-form{
+    height: 120px;
+    border: none;
+    resize: none;
+    padding-left: 10px;
+    margin: 15px 0 25px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+}
+
+.contact-container .form-container .form-contact .textarea-form::placeholder{
+    padding-top: 10px;
+}
+
+.contact-container .form-container .form-contact .btn-form{
+    height: 30px;
+    width: 120px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+

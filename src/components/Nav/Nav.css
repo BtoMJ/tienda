@@ -1,0 +1,115 @@
+.nav-container{
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    position: fixed; 
+    font-size: 1rem;
+    top: 0;
+    animation: blur;
+    animation-timeline: scroll(root block);
+    animation-range: 0 600px;
+    animation-fill-mode: forwards;
+}
+
+.nav-container .logo-container{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container .menu-central-container{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.nav-container .menu-central-container ul li{
+    margin: 0 20px;
+}
+
+.nav-container .menu-central-container ul li a:visited,
+.nav-container .menu-central-container ul li .link-nav{
+    color: #FFFFFF;
+}
+
+.nav-container .menu-central-container ul li a{
+    color: #FFFFFF;
+    transition: .5s all ease-in-out;
+    animation: size;
+    animation-timeline: scroll(root block);
+    animation-range: 0 600px;
+    animation-fill-mode: forwards;
+}
+
+.nav-container .menu-central-container ul li a:hover{
+    transform: scale(1.1);
+    color: #C8000C;
+}
+
+.nav-container .menu-lateral-container{
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container .logo-container .logo{
+    height: 60px;
+    animation: small-logo;
+    animation-timeline: scroll(root block);
+    animation-fill-mode: forwards;
+    animation-range: 0 600px;
+    transition: .5s all ease-in-out;
+}
+
+.nav-container .menu-lateral-container .icon-nav-bar{
+    animation: size-2;
+    animation-timeline: scroll(root block);
+    animation-range: 0 600px;
+    animation-fill-mode: forwards;
+}
+
+@keyframes blur{
+    to{
+        height: 7vh;
+        background: rgba(0,0,0,.65);
+        backdrop-filter: blur(5px);
+    }
+}
+
+@keyframes size{
+    to{
+        font-size: .9rem;
+        font-weight: 500;
+    }
+}
+
+@keyframes size-2{
+    to{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+}
+
+@keyframes small-logo{
+    0%{
+        height: 60px;
+    }
+    50%{
+        height: 50px;
+    }
+    100%{
+        height: 40px;
+    }
+}
