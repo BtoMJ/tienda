@@ -31,6 +31,34 @@
 
 @media (481px <= width <= 768px){
 
+    .news-letter-container{
+        width: 100%;
+        height: 40vh;
+        font-size: 1.3rem;
+        color: #FFFFFF;
+        background-image: linear-gradient(90deg,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75)), url("../../assets/Nike-white.jpg");
+        background-position: bottom -70px center;
+        background-size: cover;
+    }
+    
+    .news-letter-container h2{
+        color: #C8000C;
+        font-size: 2rem;
+    }
+    
+    .news-letter-container p{
+        width: 80%;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 33px;
+        margin: 10px 0 40px 0;
+    }
+    
+    .news-letter-container .input-data{
+        width: 50vw;
+        margin-bottom: 40px;
+    }
+
 }
 
 @media (769px <= width <= 1024px){

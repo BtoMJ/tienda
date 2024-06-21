@@ -9,6 +9,12 @@
 
 @media (481px <= width <= 768px){
 
+    /* home-container{
+        width: 10vw;
+        height: 100vh;
+        overflow-x: hidden;
+    } */
+
 }
 
 @media (769px <= width <= 1024px){

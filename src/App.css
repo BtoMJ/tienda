@@ -8,6 +8,10 @@
 
 @media (481px <= width <= 768px){
 
+    .app-container{
+        max-width: 100vw;
+    }
+
 }
 
 @media (769px <= width <= 1024px){
