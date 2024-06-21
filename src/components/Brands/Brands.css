@@ -66,6 +66,31 @@
 
 @media (769px <= width <= 1024px){
 
+    .brands-container{
+        width: 100vw;
+        height: 40vh;
+        padding: 30px;
+        background-color: #FFF;
+    }
+
+    .brands-container h2{
+        font-size: 1.5rem;
+    }
+
+    .brands-container .brands-images{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .brands-container .brands-images img{
+        width: 80px;
+        margin: 0 20px;
+    }
+
 }
 
 @media (1025px <= width <= 1200px){

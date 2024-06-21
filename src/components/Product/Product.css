@@ -169,6 +169,87 @@
 
 @media (769px <= width <= 1024px){
 
+    .card-container{
+        width: 180px;
+        height: 300px;
+        background-color: #FFF;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        transition-duration: 300ms;
+        transition-property: transform, box-shadow;
+        transition-timing-function: ease-out;
+        transform: rotate3d(0);
+        padding: 0 10px;
+    }
+
+    .card-container .top-container{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .card-container .top-container .iconShopping{
+        width: 31px;
+        height: 31px;
+        border-radius: 30px;
+        background-color: rgb(236, 236, 236);
+        position: relative;
+        z-index: 10;
+        top: 10px;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-container .top-container .iconShopping .icon-card{
+        font-size: 1.3rem;
+        margin-top: 5px;
+    }
+
+    .card-container .top-container .iconShopping .icon-card-2{
+        font-size: 1.3rem;
+        margin-top: 5px;
+        margin-left: 7px;
+    }
+
+    .card-container .img-container{
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
+        background-color: #FFF;
+    }
+    
+    .card-container .img-container img{
+        width: 90%;
+        z-index: -10;
+        margin-top: -30px;
+        margin-left: 10px;
+    }
+    
+    .card-container .info-container{
+        font-family: "Roboto", sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .card-container .info-container h4{
+        height: 40px;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .card-container .info-container p{
+        font-size: 1.7rem;
+        font-weight: 900;
+        margin-top: 15px;
+    }
+    
+    .card-container .bottom-container{
+        margin-top: 25px;
+    }
+
+
 }
 
 @media (1025px <= width <= 1200px){
