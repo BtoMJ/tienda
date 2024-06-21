@@ -61,6 +61,7 @@ function Product( { name, image, price, rate } ){
             <div className="top-container">
                 <div className='iconShopping hvr-pulse-grow'>
                     <FavoriteIcon 
+                        className="icon-card"
                         sx={{ 
                             fontSize: 20, 
                             marginTop: 0.7, 
@@ -72,11 +73,10 @@ function Product( { name, image, price, rate } ){
                             fontSize: 16,
                             marginTop: -0.5,
                             },
-                            "@media (min-width: 0px) and (max-width: 1199px)": {
+                            "@media (min-width: 0px) and (max-width: 480px)": {
                             fontSize: 14,
                             marginTop: -1,
                             position: "relative",
-                            
                             },
                         }}
                         // onClick={()=>handleAddWishList(decoded ? decoded.user.id : gId,id)}  
@@ -84,6 +84,7 @@ function Product( { name, image, price, rate } ){
                 </div>
                 <div className="iconShopping hvr-pulse-grow">
                     <ShoppingCartIcon 
+                        className="icon-card-2"
                         sx={{
                             width: 30,
                             fontSize: 20,

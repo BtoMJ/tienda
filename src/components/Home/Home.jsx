@@ -7,16 +7,17 @@ import Contact from '../Contact/Contact';
 import Brands from '../Brands/Brands';
 import Footer from '../Footer/Footer';
 import Nav from '../Nav/Nav';
+import './Home.css';
 
 function Home(){
     return(
         <div className='home-container' id='home'>
 
-            <Nav />
+            {/* <Nav />*/}
             <Slider />
             <News />
             <About />
-            <NewsLetter />
+            <NewsLetter /> 
             <Contact />
             <Brands />
             <Footer />

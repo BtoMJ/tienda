@@ -1,23 +1,71 @@
-.news-letter-container{
-    width: 100vw;
-    height: 50vh;
-    font-size: 1.3rem;
-    color: #FFFFFF;
-    background-image: linear-gradient(90deg,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75)), url("../../assets/Nike-white.jpg");
-    background-position: bottom -180px center;
-    background-size: cover;
+@media (320px <= width <= 480px){
+
+    .news-letter-container{
+        width: 100%;
+        height: 60vh;
+        font-size: 1.3rem;
+        color: #FFFFFF;
+        background-image: linear-gradient(90deg,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75)), url("../../assets/Nike-white.jpg");
+        background-position: bottom -220px center;
+        background-size: cover;
+    }
+    
+    .news-letter-container h2{
+        color: #C8000C;
+        font-size: 2rem;
+    }
+    
+    .news-letter-container p{
+        font-size: 1.3rem;
+        text-align: center;
+        line-height: 33px;
+        margin: 10px 0 40px 0;
+    }
+    
+    .news-letter-container .input-data{
+        width: 80vw;
+        margin-bottom: 40px;
+    }
+    
 }
 
-.news-letter-container h2{
-    color: #C8000C;
-    font-size: 2.5rem;
+@media (481px <= width <= 768px){
+
 }
 
-.news-letter-container p{
-    margin: 10px 0 40px 0;
+@media (769px <= width <= 1024px){
+
 }
 
-.news-letter-container .input-data{
-    width: 25vw;
-    margin-bottom: 40px;
+@media (1025px <= width <= 1200px){
+
 }
+
+@media (1201px <= width <= 1920px){
+
+    .news-letter-container{
+        width: 100vw;
+        height: 50vh;
+        font-size: 1.3rem;
+        color: #FFFFFF;
+        background-image: linear-gradient(90deg,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75)), url("../../assets/Nike-white.jpg");
+        background-position: bottom -180px center;
+        background-size: cover;
+    }
+    
+    .news-letter-container h2{
+        color: #C8000C;
+        font-size: 2.5rem;
+    }
+    
+    .news-letter-container p{
+        margin: 10px 0 40px 0;
+    }
+    
+    .news-letter-container .input-data{
+        width: 25vw;
+        margin-bottom: 40px;
+    }
+
+}
+

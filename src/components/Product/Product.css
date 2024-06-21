@@ -1,13 +1,171 @@
-.card-container{
-    width: 250px;
-    height: 95%;
-    background-color: #FFF;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-    transition-duration: 300ms;
-    transition-property: transform, box-shadow;
-    transition-timing-function: ease-out;
-    transform: rotate3d(0);
+@media (320px <= width <= 480px){
+
+    .card-container{
+        width: 160px;
+        height: 290px;
+        background-color: #FFF;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        transition-duration: 300ms;
+        transition-property: transform, box-shadow;
+        transition-timing-function: ease-out;
+        transform: rotate3d(0);
+        margin-bottom: 30px;
+    }
+
+    .card-container .top-container{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .card-container .top-container .iconShopping{
+        width: 31px;
+        height: 31px;
+        border-radius: 30px;
+        background-color: rgb(236, 236, 236);
+        position: relative;
+        z-index: 10;
+        top: 10px;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-container .top-container .iconShopping .icon-card{
+        font-size: 1.4rem;
+        margin-top: 5px;
+    }
+
+    .card-container .top-container .iconShopping .icon-card-2{
+        font-size: 1.4rem;
+        margin-top: 5px;
+        margin-left: 7px;
+    }
+
+    .card-container .img-container{
+        width: 100%;
+        height: 120px;
+        overflow: hidden;
+        background-color: #FFF;
+    }
+    
+    .card-container .img-container img{
+        width: 100%;
+        z-index: -10;
+        margin-top: -20px;
+        margin-left: -1px;
+    }
+    
+    .card-container .info-container{
+        font-family: "Roboto", sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .card-container .info-container h4{
+        height: 40px;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .card-container .info-container p{
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-top: 15px;
+    }
+    
+    .card-container .bottom-container{
+        margin-top: 10px;
+    }
+    
 }
+
+@media (481px <= width <= 768px){
+
+}
+
+@media (769px <= width <= 1024px){
+
+}
+
+@media (1025px <= width <= 1200px){
+
+}
+
+@media (1201px <= width <= 1920px){
+
+    .card-container{
+        width: 250px;
+        height: 95%;
+        background-color: #FFF;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        transition-duration: 300ms;
+        transition-property: transform, box-shadow;
+        transition-timing-function: ease-out;
+        transform: rotate3d(0);
+    }
+
+    .card-container .top-container{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .card-container .top-container .iconShopping{
+        width: 31px;
+        height: 31px;
+        border-radius: 30px;
+        background-color: rgb(236, 236, 236);
+        position: relative;
+        z-index: 10;
+        top: 10px;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-container .img-container{
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+        background-color: #FFF;
+    }
+    
+    .card-container .img-container img{
+        width: 90%;
+        z-index: -10;
+        margin-top: -40px;
+        margin-left: 15px;
+    }
+    
+    .card-container .info-container{
+        font-family: "Roboto", sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .card-container .info-container h4{
+        height: 40px;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .card-container .info-container p{
+        font-size: 1.7rem;
+        font-weight: 900;
+        margin-top: 15px;
+    }
+    
+    .card-container .bottom-container{
+        margin-top: 25px;
+    }
+
+}
+
 
 .card-container:hover{
     transition-duration: 150ms;
@@ -21,76 +179,8 @@
     height: 100%;
     left: 0;
     top: 0;
-    
     background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
 }
-
-.card-container .top-container{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.card-container .top-container .iconShopping{
-    width: 31px;
-    height: 31px;
-    border-radius: 30px;
-    background-color: rgb(236, 236, 236);
-    position: relative;
-    z-index: 10;
-    top: 10px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card-container .img-container{
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
-    background-color: #FFF;
-}
-
-.card-container .img-container img{
-    width: 90%;
-    z-index: -10;
-    margin-top: -40px;
-    margin-left: 15px;
-}
-
-.card-container .info-container{
-    font-family: "Roboto", sans-serif;
-    font-size: 1.2rem;
-}
-
-.card-container .info-container h4{
-    height: 40px;
-    font-size: 1.1rem;
-    text-align: center;
-}
-
-.card-container .info-container p{
-    font-size: 1.7rem;
-    font-weight: 900;
-    margin-top: 15px;
-}
-
-.card-container .bottom-container{
-    
-    margin-top: 25px;
-}
-
-
-
-
-
-
-
-
-
 
 
 
