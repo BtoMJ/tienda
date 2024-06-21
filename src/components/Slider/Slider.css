@@ -11,49 +11,45 @@
     .slider-container .slider-1{
         width: 100vw;
         height: 100vh;
-        display: flex;
         flex-direction: column;
-        background-position: top 20px left -190px;
-        background-repeat: no-repeat;
+        background-image: linear-gradient(35deg,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url("../../assets/slider/slider-1-movil.png");
     }
-
+    
     .slider-container .slider-2{
         width: 100vw;
-        height: 100vh;
-        display: flex;
+        height: 85vh;
         flex-direction: column;
-        background-position: top 20px left -190px;
-        background-repeat: no-repeat;
+        background-image: linear-gradient(35deg,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url("../../assets/slider/slider-2-movil.png");
     }
-
+    
     .slider-container .slider-3{
         width: 100vw;
-        height: 100vh;
+        height: 80vh;
         flex-direction: column;
-        background-position: top left -300px;
-        background-repeat: no-repeat;
+        background-image: linear-gradient(35deg,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url("../../assets/slider/slider-3-movil.png");
     }
 
     .slider-container .slider-3 .info-1,
     .slider-container .slider-1 .info-1{
         position: relative;
-        margin-top: 20vh;
+        margin-top: 65vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* margin-left: 13vh; */
     }
-
+    
     .slider-container .slider-2 .info-2{
         position: relative;
-        margin-top: 20vh;
-        margin-left: 15vw;
+        margin-top: 65vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* margin-left: 15vw; */
     }
     
     .slider-container .slider-2 .info-2 h1{
         font-family: "Roboto", sans-serif;
         font-size: 2rem;
-        /* margin-left: 60px; */
     }
 
     .slider-container .slider-3 .info-1 h1,
@@ -63,7 +59,7 @@
     }
 
     .slider-container .line-1{
-        width: 37vw;
+        width: 45vw;
         height: 2px;
         margin: 10px 0 5px 50px;
         border-radius: 100%;
@@ -71,9 +67,9 @@
     }
 
     .slider-container .line-2{
-        width: 35vw;
+        width: 40vw;
         height: 2px;
-        margin: 10px 0 5px 100px;
+        margin: 10px 0 5px 70px;
         border-radius: 100%;
         background-color: #C8000C;
     }
@@ -89,7 +85,7 @@
     .slider-container .slider-3 .info-1 .btn-2,
     .slider-container .slider-2 .info-2 .btn-2,
     .slider-container .slider-1 .info-1 .btn-2{
-        float: right;
+        /* float: right; */
         margin-top: 25px;
         /* margin-right: 150px; */
     }
@@ -122,12 +118,14 @@
         width: 100vw;
         height: 90vh;
         flex-direction: row;
+        background-image: linear-gradient(35deg,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url("../../assets/slider/slider-1.png");
     }
 
     .slider-container .slider-2{
         width: 100vw;
         height: 90vh;
         flex-direction: row;
+        background-image: linear-gradient(35deg,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url("../../assets/slider/slider-2.png");
     }
 
     .slider-container .slider-3{
@@ -135,6 +133,7 @@
         height: 90vh;
         display: flex;
         flex-direction: row;
+        background-image: linear-gradient(35deg,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url("../../assets/slider/slider-3.png");
     }
 
     .slider-container .slider-3 .info-1,
@@ -199,19 +198,18 @@
 
 .slider-container .slider-1{   
     display: flex;
-    background-image: linear-gradient(35deg,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url("../../assets/slider/slider-1.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .slider-container .slider-2{
-    flex-direction: row;
-    background-image: linear-gradient(35deg,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url("../../assets/slider/slider-2.png");
+    display: flex;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .slider-container .slider-3{
     display: flex;
-    background-image: linear-gradient(35deg,rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url("../../assets/slider/slider-3.png");
     background-size: cover;
+    background-repeat: no-repeat;
 }
