@@ -38,7 +38,7 @@
         height: 100%;
         z-index: 103;
         position: absolute;
-        top: 0;
+        top: -100vh;
         left: 0;
         display: flex;
         flex-direction: column;
