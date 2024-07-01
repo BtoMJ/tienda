@@ -1,71 +1,138 @@
-import { Link, Route, Switch } from "wouter";
+import { Link } from "wouter";
 import Badge from '@mui/material/Badge';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import logo from "../../assets/LogoBco.png";
+import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
 import './Nav.css';
 
 function Nav (){
+
+    function openMenu(){
+
+        const menuMobile = document.getElementById('menu-mobile-container');
+        menuMobile.style.top = 0;
+    
+    }
+    
+    function closeMenu(){
+    
+        const menuMobile = document.getElementById('menu-mobile-container');
+        menuMobile.style.top = "-100vh";
+    
+    }
+
     return(
-        <div className='nav-container'>
+        <>
+            <div id="nav-container" className='nav-container' >
 
-            <div className='logo-container'>
-                <img className="logo" src={logo} alt="logo" />
-            </div>
+                <div className='logo-container'>
+                    <img className="logo" src={logo} alt="logo" />
+                </div>
 
-            <div className='menu-central-container'>
-                <ul>
-                    <li><a href="#home">inicio</a></li>
-                    <li><Link className="link-nav" href="/catalog">catálogo</Link></li>
-                    <li><a href="#about">nosotros</a></li>
-                    <li><a href="#contact">contacto</a></li>
-                </ul>
-            </div>
+                <div className="items-mobile">
+                    <div className="cart-mobile">
+                        <Badge 
+                            badgeContent={1} 
+                            sx={{
+                                "& .MuiBadge-badge": {
+                                    color: '#FFFFFF',
+                                    backgroundColor: "#C8000C",
+                                }
+                            }}
+                            >
+                            <ShoppingCartIcon 
+                            className="icon-nav-bar"
+                            sx={{
+                                color: '#FFFFFF',
+                                cursor: 'pointer',
+                                fontSize: '1.5rem',
+                                transition: '.5s all ease-in-out',
+                                "&:hover":{
+                                    transform: 'scale(1.1)'
+                                }
+                            }} />
+                        </Badge>
+                    </div>
+                    <div className="open-container">
+                        <button onClick={()=>openMenu()} className="btn-open"><MenuIcon /></button>
+                    </div>
+                </div>
 
-            <div className='menu-lateral-container'>
 
-                <Badge 
-                badgeContent={1} 
-                sx={{
-                    "& .MuiBadge-badge": {
-                        color: '#FFFFFF',
-                        backgroundColor: "#C8000C",
-                    }
-                }}
-                >
-                    <ShoppingCartIcon 
-                    className="icon-nav-bar"
+                <div className='menu-central-container'>
+                    <ul>
+                        <li><a href="#home">inicio</a></li>
+                        <li><Link className="link-nav" href="/catalog">catálogo</Link></li>
+                        <li><a href="#about">nosotros</a></li>
+                        <li><a href="#contact">contacto</a></li>
+                    </ul>
+                </div>
+
+                <div className='menu-lateral-container'>
+
+                    <Badge 
+                    badgeContent={1} 
                     sx={{
-                        color: '#FFFFFF',
-                        cursor: 'pointer',
-                        fontSize: '1.7rem',
-                        transition: '.5s all ease-in-out',
-                        "&:hover":{
-                            transform: 'scale(1.1)'
+                        "& .MuiBadge-badge": {
+                            color: '#FFFFFF',
+                            backgroundColor: "#C8000C",
                         }
-                    }} />
-                </Badge>
-                <Link href="/login">
-                    <AccountCircleIcon 
-                    className="icon-nav-bar"
+                    }}
+                    >
+                        <ShoppingCartIcon 
+                        className="icon-nav-bar"
                         sx={{
-                            color: '#FFFFFF', 
-                            marginLeft: 5,
+                            color: '#FFFFFF',
                             cursor: 'pointer',
-                            fontSize: '2.2rem',
+                            fontSize: '1.7rem',
                             transition: '.5s all ease-in-out',
                             "&:hover":{
-                                color: '#C8000C',
                                 transform: 'scale(1.1)'
                             }
-                        }} 
+                        }} />
+                    </Badge>
+                    <Link href="/login">
+                        <AccountCircleIcon 
+                        className="icon-nav-bar"
+                            sx={{
+                                color: '#FFFFFF', 
+                                marginLeft: 5,
+                                cursor: 'pointer',
+                                fontSize: '2.2rem',
+                                transition: '.5s all ease-in-out',
+                                "&:hover":{
+                                    color: '#C8000C',
+                                    transform: 'scale(1.1)'
+                                }
+                            }} 
 
-                    />
-                </Link>
+                        />
+                    </Link>
+
+                </div>
 
             </div>
 
-        </div>
+            <div className="menu-mobile-container" id="menu-mobile-container">
+
+                <div className="close-container">
+                    <button onClick={()=>closeMenu()}  className="btn-close"><CloseIcon /></button>
+                </div>
+
+                <div className='menu-mobile'>
+                    <ul>
+                        <li><a onClick={()=>closeMenu()} href="#slider">inicio</a></li>
+                        <li><Link className="link-nav" href="/catalog">catálogo</Link></li>
+                        <li><a onClick={()=>closeMenu()} href="#about">nosotros</a></li>
+                        <li><a onClick={()=>closeMenu()} href="#contact">contacto</a></li>
+                        <li><Link className="link-nav" href="/login">login</Link></li>
+                    </ul>
+                </div>
+
+            </div>
+        </>
     )
 }
 

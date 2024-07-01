@@ -68,7 +68,7 @@ function Login(){
                             <a href="/register">Registrate aquí</a> 
                             <br /> 
                             <br />
-                            o entra con Google
+                            {/* o entra con Google */}
                         </p>
                     </div>
                 </form>

@@ -11,9 +11,9 @@ import './Home.css';
 
 function Home(){
     return(
-        <div className='home-container' id='home'>
+        <div className='home-container'>
 
-            {/* <Nav />*/}
+            <Nav />
             <Slider />
             <News />
             <About />
