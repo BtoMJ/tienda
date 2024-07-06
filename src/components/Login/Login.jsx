@@ -37,41 +37,41 @@ function Login(){
                     /* and other goodies */
                 }) => (
                     <form onSubmit={handleSubmit} className='form'> 
-                    <img src={logo} alt='Logo Blanco' />
-                    <h1>Login</h1>
-                    <label>Email</label>
-                    <input
-                        type="email"
-                        name="email"
-                        className='input-form'
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.email}
+                        <img src={logo} alt='Logo Blanco' />
+                        <h1>Login</h1>
+                        <label>Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            className='input-form'
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.email}
+                            />
+                        {errors.email && touched.email && errors.email}
+                        <label>Contraseña</label>
+                        <input
+                            type="password"
+                            name="password"
+                            className='input-form'
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.password}
                         />
-                    {errors.email && touched.email && errors.email}
-                    <label>Contraseña</label>
-                    <input
-                        type="password"
-                        name="password"
-                        className='input-form'
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        value={values.password}
-                    />
-                    {errors.password && touched.password && errors.password}
-                    <button type="submit" disabled={isSubmitting}>
-                        Submit
-                    </button>
-                    <div className="register">
-                        <p>
-                            Aún no tienes una cuenta? <br />
-                            <a href="/register">Registrate aquí</a> 
-                            <br /> 
-                            <br />
-                            {/* o entra con Google */}
-                        </p>
-                    </div>
-                </form>
+                        {errors.password && touched.password && errors.password}
+                        <button type="submit" disabled={isSubmitting}>
+                            Submit
+                        </button>
+                        <div className="register">
+                            <p>
+                                Aún no tienes una cuenta? <br />
+                                <a href="/register">Registrate aquí</a> 
+                                <br /> 
+                                <br />
+                                {/* o entra con Google */}
+                            </p>
+                        </div>
+                    </form>
                 )}
                 </Formik>
 

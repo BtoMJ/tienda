@@ -1,3 +1,31 @@
-.dashboard-container{
-    font-size: 3rem;
+@media (320px <= width <= 480px){}
+
+@media (481px <= width <= 768px){}
+
+@media (769px <= width <= 1024px){}
+
+@media (1025px <= width <= 1200px){}
+
+@media (1201px <= width <= 1920px){
+
+    .dashboard-container{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .dashboard-container .menu-dashboard-container{
+        width: 15vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background: linear-gradient(135deg, rgb(240, 95, 87), rgb(0, 0, 0)); */
+        background-color: #E4E4E1;
+        background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
+        background-blend-mode: normal, multiply;
+    }
+
 }
+
