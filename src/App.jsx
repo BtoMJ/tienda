@@ -4,7 +4,6 @@ import Home from './components/Home/Home';
 import Login from "./components/Login/Login";
 import Admin from "./components/Admin/Admin";
 import Catalog from "./components/Catalog/Catalog";
-import Dashboard from "./components/Dashboard/Dashboard";
 import Scroll from "./components/Scroll/Scroll";
 
 import Register from "./components/Register/Register";
@@ -17,6 +16,7 @@ import Reports from "./components/Dashboard/Reports/Reports";
 import NavBar from "./components/Dashboard/NavBar/NavBar";
 import HomeDash from "./components/Dashboard/HomeDash/HomeDash";
 import './App.css';
+import Profile from "./components/Profile/Profile";
 
 function App() {
 
@@ -29,6 +29,7 @@ function App() {
         <Switch>
           <Route path="/" component={Home}/>
           <Route path="/login" component={Login}/>
+          <Route path="/profile" component={Profile}/>
           <Route path="/register" component={Register}/>
           <Route path="/catalog" component={Catalog}/>
           <Route path="/admin" component={Admin}/>
@@ -55,4 +56,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

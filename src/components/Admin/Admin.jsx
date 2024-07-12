@@ -34,7 +34,6 @@ function Login(){
                     handleBlur,
                     handleSubmit,
                     isSubmitting,
-                    /* and other goodies */
                 }) => (
                     <form onSubmit={handleSubmit} className='form'> 
                         <img src={logo} alt='Logo Blanco' />
