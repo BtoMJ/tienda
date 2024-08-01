@@ -22,7 +22,7 @@ export const ADD_PRODUCT_PHOTO = "ADD_PRODUCT_PHOTO";
 export function getProducts(dayDiscount) {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`/products`);
+      const { data } = await axios.get(`http://localhost:3001/api/products`);
       return await dispatch({
         type: GET_PRODUCTS,
         payload: data,

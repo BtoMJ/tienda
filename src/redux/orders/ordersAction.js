@@ -8,8 +8,8 @@ export const FILTER_BY_STATUS = "FILTER_BY_STATUS";
 
 export function getOrders() {
   return async (dispatch) => {
-    const { data } = await axios.get("/orders");
-    return await dispatch({
+    const { data } = await axios.get("http://localhost:3001/api/orders");
+    return await dispatch({           
       type: GET_ORDERS,
       payload: data,
     });
@@ -17,7 +17,7 @@ export function getOrders() {
 }
 export function getOrdersById(id) {
   return async (dispatch) => {
-    const { data } = await axios.get(`orders/${id}`);
+    const { data } = await axios.get(`http://localhost:3001/api/orders/${id}`);
     return await dispatch({
       type: GET_ORDERS_BY_ID,
       payload: data,
@@ -26,7 +26,7 @@ export function getOrdersById(id) {
 }
 export function getUserOrderId(id) {
   return async (dispatch) => {
-    let { data } = await axios.get(`/orders/userId/${id}`);
+    let { data } = await axios.get(`http://localhost:3001/api/orders/userId/${id}`);
     console.log('a ver la data quie me llega ddsp del get',data)
     return await dispatch({
       type: GET_USER_ORDER_ID,
@@ -51,7 +51,7 @@ export function filterByStatus(payload) {
 
 export async function putOrder(id, payload) {
     console.log("data", id, payload)
-    const { data } = await axios.put(`orders/updateOrder/${id}`, payload)
+    const { data } = await axios.put(`http://localhost:3001/api/orders/updateOrder/${id}`, payload)
     console.log("data", data)
     return data
 }

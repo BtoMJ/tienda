@@ -15,19 +15,22 @@ import Users from "./components/Dashboard/Users/Users";
 import Reports from "./components/Dashboard/Reports/Reports";
 import NavBar from "./components/Dashboard/NavBar/NavBar";
 import HomeDash from "./components/Dashboard/HomeDash/HomeDash";
-import './App.css';
+import Nav from "./components/Nav/Nav";
 import Profile from "./components/Profile/Profile";
+import './App.css';
+import About from "./components/About/About";
 
 function App() {
 
   return (
     <>
       <div className='app-container'>
-
+        <Nav />
         <Scroll />
+        <Switch> 
 
-        <Switch>
           <Route path="/" component={Home}/>
+          <Route path="/#about" component={About}/>
           <Route path="/login" component={Login}/>
           <Route path="/profile" component={Profile}/>
           <Route path="/register" component={Register}/>

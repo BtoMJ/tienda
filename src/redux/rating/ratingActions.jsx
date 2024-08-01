@@ -11,7 +11,7 @@ export const TYPES = {
 export function getRatings(){
     return async (dispatch) => {
         try {
-            let { data } = await axios.get(`/products`)
+            let { data } = await axios.get(`http://localhost:3001/api/products`)
             data = data.map(el => {
                 return {
                     ...el,

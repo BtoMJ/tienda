@@ -6,7 +6,7 @@ export const POST_CATEGORIE = "POST_CATEGORIE";
 
 export function getCategories() {
     return async (dispatch) => {
-        const categories = await axios.get('/Categories')
+        const categories = await axios.get('http://localhost:3001/api/Categories')
         return await dispatch({
             type: GET_CATEGORIES,
             payload: categories.data

@@ -180,7 +180,7 @@ export const loadCart = (user) =>
        
       let orderId = JSON.parse(localStorage.getItem("orderId"));
       // console.log("here", orderId)
-      let cart = await axios.get("/orders/" + orderId)//order solamente
+      let cart = await axios.get("http://localhost:3001/api/orders/" + orderId)//order solamente
       if(cart.data.status !== "inCart"){//viene del back cart
         let res = await axios.post("/orders/createOrder", {userId:user1})
         window.localStorage.setItem("orderId", JSON.stringify(res.data.orderId))

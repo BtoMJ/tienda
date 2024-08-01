@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link, useLocation, useParams } from "wouter";
 import Badge from '@mui/material/Badge';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -8,6 +8,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import './Nav.css';
 
 function Nav (){
+
+    const [location, setLocation] = useLocation();
+    const params = useParams();
+    console.log("PARAMS: ",params)
 
     function openMenu(){
 
@@ -63,10 +67,11 @@ function Nav (){
 
                 <div className='menu-central-container'>
                     <ul>
-                        <li><a href="#home">inicio</a></li>
+                        <li><Link href="/">inicio</Link></li>
                         <li><Link className="link-nav" href="/catalog">catálogo</Link></li>
-                        <li><a href="#about">nosotros</a></li>
-                        <li><a href="#contact">contacto</a></li>
+                        <li><a className={`${location === '/catalog' ? 'disabled':''}`} href="#about">nosotros</a></li>
+                        {/* <li><a href="/#about">nosotros</a></li> */}
+                        <li><a className={`${location === '/catalog' ? 'disabled':''}`} href="#contact">contacto</a></li>
                     </ul>
                 </div>
 

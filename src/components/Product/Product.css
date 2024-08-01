@@ -260,13 +260,17 @@
 
     .card-container{
         width: 250px;
-        height: 95%;
+        height: 315px;
         background-color: #FFF;
-        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
         transition-duration: 300ms;
         transition-property: transform, box-shadow;
-        transition-timing-function: ease-out;
-        transform: rotate3d(0);
+        margin: 15px;
+        padding-top: 10px;
+    }
+
+    .card-container:hover{
+        transform:translateY(-10px);
+        background-image: linear-gradient(to top,rgba(231, 231, 231, 0.8) 0%, rgba(255, 255, 255, 1) 40%);
     }
 
     .card-container .top-container{
@@ -293,37 +297,38 @@
 
     .card-container .img-container{
         width: 100%;
-        height: 180px;
+        height: 135px;
         overflow: hidden;
         background-color: #FFF;
     }
     
     .card-container .img-container img{
-        width: 90%;
+        width: 70%;
         z-index: -10;
-        margin-top: -40px;
-        margin-left: 15px;
+        margin-top: -25px;
+        margin-left: 40px;
     }
     
     .card-container .info-container{
         font-family: "Roboto", sans-serif;
-        font-size: 1.2rem;
     }
 
     .card-container .info-container h4{
+        width: 80%;
         height: 40px;
         font-size: 1.1rem;
+        font-weight: 400;
         text-align: center;
     }
     
     .card-container .info-container p{
         font-size: 1.7rem;
-        font-weight: 900;
-        margin-top: 15px;
+        font-weight: 700;
+        margin-top: 10px;
     }
     
     .card-container .bottom-container{
-        margin-top: 25px;
+        margin-top: 10px;
     }
 
 }
@@ -331,7 +336,7 @@
 
 .card-container:hover{
     transition-duration: 150ms;
-    box-shadow: 0 5px 20px 5px #00000044;
+    box-shadow: 0 5px 15px 5px #00000022;
     cursor: pointer;
 }
 

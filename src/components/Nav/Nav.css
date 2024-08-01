@@ -195,8 +195,14 @@
     .cart-mobile{
         display: none;
     }
-    
 
+}
+
+
+.disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+    color:#38383880;
 }
 
 

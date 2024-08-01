@@ -1,0 +1,87 @@
+.PaginadoContainerMobile{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: thin dotted #fff; */
+    /* border: thin dotted #0f0; */
+}
+
+.PaginadoNumbersMobile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.PageMobile{
+    width: 20px;
+    height: 20px;
+    float: left;
+    text-align: center;
+    font-size: 1.5vh;
+    margin: 0 2px;
+    transition: 0.5s all;
+}
+
+.PageMobile a{
+    text-decoration: none;
+}
+
+/* .PageCurrent{
+    border-bottom: solid 2px #f00;
+} */
+
+.PageMobile a:hover{
+    cursor: pointer;
+    color: #f00;
+}
+
+.NumberMobile{
+    /* padding: 1px; */
+    /* margin: 0 2px; */
+    color: #000;
+    font-weight: bold;
+}
+
+/* .NumberCurrent{
+    color: #f00;
+} */
+
+
+
+@media (max-width: 575px){
+    
+    .PaginadoContainerMobile{
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+
+    .PageMobile{
+        width: 10px;
+        height: 20px;
+        text-align: center;
+        float: left;
+        margin: 0 5px;
+    }
+    
+    .NumberMobile{
+        font-size: 12px;
+        color: #000;
+        font-weight: bold;
+    }
+    
+    .PageCurrent{
+        font-size: 12px;
+        color: #f00;
+        font-weight: bold;
+        border-bottom: solid 2px #f00;
+    }
+
+}
