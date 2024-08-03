@@ -143,7 +143,79 @@
         box-shadow: 0 5px 10px #00000030;
     }
 
+    .modal-product{
+        width: 700px;
+        height: 350px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        outline: none;
+        box-shadow: 0 10px 10px -2px rgba(0, 0, 0, 0.7);
+        background-color: #FFF;
+        z-index: 100;
+    }
+
+    .modal-product .image-product-modal{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     
+    .modal-product .image-product-modal img{
+        width: 100%;
+    }
+
+    .modal-product .product-detail{
+        width: 60%;
+        padding: 10px;
+        /* display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; */
+    }
+
+    .modal-product .product-detail .title-product-modal{
+        font-size: 1.7rem;
+        line-height: 27px;
+        font-weight: 600;
+    }
+
+    .modal-product .product-detail .description-product-modal{
+        margin-top: 10px;
+    }
+
+    .modal-product .product-detail .description-product-modal h4{
+        font-size: 1.2rem;
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+
+    .modal-product .product-detail .description-product-modal p{
+        font-size: 1rem;
+        line-height: 20px;
+    }
+
+    .modal-product .product-detail .description-product-modal p:nth-child(3){
+        font-size: 1rem;
+        margin-top: 15px;
+        line-height: 20px;
+        font-weight: 600;
+    }
+
+    
+}
+
+.modal-btn-catalogue:hover,
+.modal-btn-catalogue{
+    background-color: transparent;
 }
 
 .Paginado{

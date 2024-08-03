@@ -260,7 +260,7 @@
 
     .card-container{
         width: 250px;
-        height: 315px;
+        height: 320px;
         background-color: #FFF;
         transition-duration: 300ms;
         transition-property: transform, box-shadow;

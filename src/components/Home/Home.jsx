@@ -7,11 +7,13 @@ import Contact from '../Contact/Contact';
 import Brands from '../Brands/Brands';
 import Footer from '../Footer/Footer';
 import './Home.css';
+import Nav from '../Nav/Nav';
 
 function Home(){
     return(
         <div className='home-container'>
 
+            <Nav />
             <Slider />
             <News />
             <About />

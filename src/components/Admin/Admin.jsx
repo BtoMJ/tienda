@@ -38,24 +38,25 @@ function Login(){
                     <form onSubmit={handleSubmit} className='form'> 
                         <img src={logo} alt='Logo Blanco' />
                         <h1>Administración</h1>
-                        <label>Email</label>
                         <input
                             type="email"
                             name="email"
-                            className='input-form'
+                            className="field"
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.email}
+                            placeholder="Email"
                             />
                         {errors.email && touched.email && errors.email}
-                        <label>Contraseña</label>
                         <input
                             type="password"
                             name="password"
-                            className='input-form'
+                            // className='input-form'
+                            className="field"
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.password}
+                            placeholder="Contraseña"
                         />
                         {errors.password && touched.password && errors.password}
                         <button type="submit" disabled={isSubmitting}>

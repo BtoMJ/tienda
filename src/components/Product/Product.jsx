@@ -1,15 +1,53 @@
+import { useEffect, useState } from 'react';
+import Modal from '@mui/material/Modal';
+
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Rating from "@mui/material/Rating";
 import './Product.css';
-
                                    
 function Product( { id, name, image, price, rate, status, description, Sizes, onSale, discounts } ){
+
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
     var intFrameWidth = window.innerWidth;
 
     return(
-        <div className='card-container'>
+        <>
+        <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+        >
+            <div className='modal-product'>
+                <div className='image-product-modal'>
+                    <img src={image} alt={`foto de ${name}`}/>
+                </div>
+                <div className='product-detail'>
+                    <div className='title-product-modal'>{name}</div>
+                    <div className='rate-product-modal'>
+                        <Rating className='rate-product-modal' value={rate} readOnly size="small" />
+                    </div>
+                    <div className='status-product-modal'></div>
+                    <div className='description-product-modal'>
+                        <h4>Descripción</h4>
+                        <p>
+                            {description}
+                        </p>
+                        <p>
+                            Estatus: {status}
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>  
+        </Modal>
+
+        <div className='card-container' onClick={handleOpen}>
+
 
             <div className="top-container">
                 <div className='iconShopping hvr-pulse-grow'>
@@ -82,6 +120,7 @@ function Product( { id, name, image, price, rate, status, description, Sizes, on
             </div>
 
         </div>
+        </>
     )
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -64,10 +64,6 @@ function Login() {
             password: "",
           }}
           onSubmit={async (body) => {
-
-            
-
-
             const check = await userLogin(body);
             setUser(check.id);
             setMail({ mail: body.mail });
@@ -120,7 +116,8 @@ function Login() {
           {({ errors }) => (
             <Form className='form'>
               
-              <img src={logo} alt='Logo Blanco' />
+              
+              <Link href="/"><img src={logo} alt='Logo Blanco' /></Link>
               <h1>Login</h1>
                   <Field
                     className="field"
@@ -175,6 +172,10 @@ function Login() {
                 <div className="register">
                     Aún no tienes una cuenta? <br />
                     <a href="/register">Registrate aquí</a>
+                </div>
+                <div className="forget">
+                    Olvidaste tu contraseña? <br />
+                    <a href="/register">Recupérala</a>
                 </div>
                
             </Form>

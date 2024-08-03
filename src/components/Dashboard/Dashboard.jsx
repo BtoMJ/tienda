@@ -1,8 +1,6 @@
-
-
 import { Route, Switch } from "wouter";
-
 import './Dashboard.css';
+
 import NavBar from "./NavBar/NavBar";
 
 function Dashboard(){

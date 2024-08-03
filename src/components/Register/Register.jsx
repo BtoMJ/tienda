@@ -39,44 +39,45 @@ function Register(){
                     <form onSubmit={handleSubmit} className='form'> 
                     <img src={logo} alt='Logo Blanco' />
                     <h1>Registro</h1>
-                    <label>Nombre</label>
                     <input
                         type="text"
                         name="name"
-                        className='input-form'
+                        className="field"
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.name}
+                        placeholder="Nombre"
                         />
                     {errors.name && touched.name && errors.name}
-                    <label>Apellido</label>
                     <input
                         type="text"
                         name="lastname"
-                        className='input-form'
+                        className="field"
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.name}
+                        placeholder="Apellido"
                         />
                     {errors.lastname && touched.lastname && errors.lastname}
-                    <label>Email</label>
                     <input
                         type="email"
                         name="email"
-                        className='input-form'
+                        className="field"
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.email}
+                        placeholder="Email"
                         />
                     {errors.email && touched.email && errors.email}
-                    <label>Contraseña</label>
                     <input
                         type="password"
                         name="password"
-                        className='input-form'
+                        // className='input-form'
+                        className="field"
                         onChange={handleChange}
                         onBlur={handleBlur}
                         value={values.password}
+                        placeholder="Contraseña"
                     />
                     {errors.password && touched.password && errors.password}
                     <button type="submit" disabled={isSubmitting}>
