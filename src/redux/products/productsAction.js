@@ -22,7 +22,7 @@ export const ADD_PRODUCT_PHOTO = "ADD_PRODUCT_PHOTO";
 export function getProducts(dayDiscount) {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`http://localhost:3001/api/products`);
+      const { data } = await axios.get(`api/products`);
       return await dispatch({
         type: GET_PRODUCTS,
         payload: data,
@@ -37,7 +37,7 @@ export function getProducts(dayDiscount) {
 export function getProductsWithDiscounts(payload) {
   return async (dispatch) => {
     try {
-      const { data } = await axios.put(`/products/discount`, payload);
+      const { data } = await axios.put(`api/products/discount`, payload);
       return data;
     } catch (error) {
       console.log(error);
@@ -49,7 +49,7 @@ export function updateDiscountById(payload) {
   let { id } = payload;
   return async () => {
     try {
-      const { data } = await axios.put(`/products/discount/${id}`, payload);
+      const { data } = await axios.put(`api/products/discount/${id}`, payload);
       return data;
     } catch (error) {
       console.log(error);
@@ -60,7 +60,7 @@ export function updateDiscountById(payload) {
 export function unSubscribeDiscountById(payload) {
   return async () => {
     try {
-      const { data } = await axios.put(`/products/${payload}/discountOff`);
+      const { data } = await axios.put(`api/products/${payload}/discountOff`);
       return data;
     } catch (error) {
       console.log(error);
@@ -90,7 +90,7 @@ export function orderMethod(payload, order) {
 export function getProductsById(id) {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`/products/${id}`);
+      const { data } = await axios.get(`api/products/${id}`);
       return await dispatch({
         type: GET_PRODUCT_BY_ID,
         payload: data,
@@ -103,7 +103,7 @@ export function getProductsById(id) {
 
 export function productForm(form) {
   return async (dispatch) => {
-    const { data } = await axios.post(`/products/createProduct`, form);
+    const { data } = await axios.post(`api/products/createProduct`, form);
     return data;
   };
 }
@@ -113,7 +113,7 @@ export const postProduct = async (payload) => {
   let prueba = "";
   try {
     const res = await axios.post(
-      `/products/createProduct`,
+      `api/products/createProduct`,
       { prueba },
       {
         headers: {
@@ -194,7 +194,7 @@ export function restoreData(payload) {
 export function filtersReset() {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`/products`);
+      const { data } = await axios.get(`api/products`);
       return await dispatch({
         type: FILTERS_RESET,
         payload: data,
@@ -214,7 +214,7 @@ export function cleanDetail(payload) {
 export function getProductStockById(id) {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`/productSizes/${id}`);
+      const { data } = await axios.get(`api/productSizes/${id}`);
       return await dispatch({
         type: GET_PRODUCT_STOCK_ID,
         payload: data,
@@ -227,7 +227,7 @@ export function getProductStockById(id) {
 export function getProductsByName(payload) {
   return async function (dispatch) {
     try {
-      let response = await axios.get(`/products?name=` + payload);
+      let response = await axios.get(`api/products?name=` + payload);
       return dispatch({
         type: GET_PRODUCT_NAME,
         payload: response.data,
@@ -241,7 +241,7 @@ export function getProductStockBySize(id, body) {
   return async (dispatch) => {
     try {
       let info = { SizeId: body.SizeId };
-      const data = await axios.get(`/productSizes/stockBySize/${id}`, info);
+      const data = await axios.get(`api/productSizes/stockBySize/${id}`, info);
       return await dispatch({
         type: GET_PRODUCT_STOCK_SIZE,
         payload: data,
@@ -253,7 +253,7 @@ export function getProductStockBySize(id, body) {
 }
 export function PutProduct(payload) {
   return async () => {
-    const { data } = axios.put(`/products/updateProduct/`, payload);
+    const { data } = axios.put(`api/products/updateProduct/`, payload);
     return data;
   };
 }

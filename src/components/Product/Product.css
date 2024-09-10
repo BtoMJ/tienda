@@ -2,14 +2,15 @@
 
     .card-container{
         width: 160px;
-        height: 290px;
+        height: 270px;
         background-color: #FFF;
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
         transition-duration: 300ms;
         transition-property: transform, box-shadow;
         transition-timing-function: ease-out;
         transform: rotate3d(0);
-        margin-bottom: 30px;
+        margin: 30px 10px;
+        /* border: 1px solid #F0F; */
     }
 
     .card-container .top-container{
@@ -47,16 +48,16 @@
 
     .card-container .img-container{
         width: 100%;
-        height: 120px;
+        height: 110px;
         overflow: hidden;
         background-color: #FFF;
     }
     
     .card-container .img-container img{
-        width: 100%;
+        width: 90%;
         z-index: -10;
         margin-top: -20px;
-        margin-left: -1px;
+        margin-left: 5px;
     }
     
     .card-container .info-container{
@@ -66,7 +67,7 @@
 
     .card-container .info-container h4{
         height: 40px;
-        font-size: 1.1rem;
+        font-size: 1rem;
         text-align: center;
     }
     

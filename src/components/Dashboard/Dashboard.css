@@ -28,5 +28,123 @@
         background-blend-mode: normal, multiply;
     }
 
+    .item-dashboard-container{
+        width: calc(85vw);
+        height: calc(92vh);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        overflow-y: scroll;
+    }
+
+    .item-dashboard-container .section-tool,
+    .item-dashboard-container .title-section{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .item-dashboard-container .section-tool{
+        width: 50vw;
+        margin-bottom: 30px;
+    }
+
+    .item-dashboard-container .section-tool .search-container{
+        margin-right: 40px;
+    }
+
+    .item-dashboard-container .section-tool .search-container label{
+        margin-right: 10px;
+        font-weight: 600;
+    }
+
+    .item-dashboard-container .section-tool .search-container .search-input{
+        height: 25px;
+        border-radius: 20px;
+        padding: 0 5px 0 15px;
+        outline: none;
+        border: 1px solid #c2c2c2;
+    }
+
+    .item-dashboard-container .section-tool .search-container .search-input:focus{
+        border: none;
+        outline: 2px solid #C8000C;
+    }
+
+    .item-dashboard-container .section-tool .btn-add{
+        border: none;
+        padding: 5px 15px;
+        border-radius: 20px;
+        transition: .5s all ease-in-out;
+        cursor: pointer;
+        color: #FFF;
+        font-weight: 700;
+        background-color: #000000;
+    }
+    
+    .item-dashboard-container .section-tool .btn-add:hover{
+        transform: translateY(-5px);
+        box-shadow: 0px 5px 5px rgba(0,0,0,.3);
+    }
+    
+    .item-dashboard-container .title-section .title-section-icon{
+        font-size: 2rem;
+        padding: 10px;
+        margin-top: 10px;
+        color: #C8000C;
+    }
+    
+    .item-dashboard-container .table-user .MuiTableHead-root{
+       background-color: #e0e0e0;
+    }
+
+    .item-dashboard-container .table-user .th-table{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .item-dashboard-container .table-user .pic-profile{
+       font-size: 2rem;
+    }
+
+    .item-dashboard-container .table-user .btn-edit{
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 50%;
+        background-color: rgb(255, 217, 0);
+        cursor: pointer;
+        transition: .5s all ease-in-out;
+    }
+    
+    .item-dashboard-container .table-user .btn-erase{
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 50%;
+        color: #FFF;
+        background-color: #C8000C;
+        cursor: pointer;
+        transition: .5s all ease-in-out;
+    }
+
+    .item-dashboard-container .table-user .btn-edit:hover,
+    .item-dashboard-container .table-user .btn-erase:hover{
+        transform: translateY(-5px);
+        box-shadow: 0px 5px 5px rgba(0,0,0,.3);
+    }
+
 }
 

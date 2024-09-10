@@ -9,7 +9,7 @@ export const GET_USER_WISH = "GET_USER_WISH";
 export const userRegister = async (payload) => {
   try {
     console.log("estoy entrando", payload);
-    let { data } = await axios.post("/register", payload);
+    let { data } = await axios.post("api/register", payload);
     return data;
   } catch (err) {
     console.log("rompo en la action de user", err);
@@ -31,7 +31,7 @@ export const userDeleteWish = async (id, productId) => {
   console.log("esta es la id", id);
   console.log("este es el product id ", productId);
   try {
-    let { data } = await axios.delete(`/wishList/unWish/${id}/${productId}`);
+    let { data } = await axios.delete(`api/wishList/unWish/${id}/${productId}`);
     return data;
   } catch (err) {
     console.log("rompo en el controlelr de deleteWish", err);
@@ -41,7 +41,7 @@ export const userDeleteWish = async (id, productId) => {
 export const userPostWish = async (userId, productId) => {
   console.log(userId, productId);
   try {
-    let { data } = await axios.post("/wishList/addWish", { userId, productId });
+    let { data } = await axios.post("api/wishList/addWish", { userId, productId });
     return data;
   } catch (err) {
     console.log("rompo en la action de postWish", err);
@@ -51,7 +51,7 @@ export const userPostWish = async (userId, productId) => {
 export const userWishListGet = (id) => {
   return async function (dispatch) {
     try {
-      let { data } = await axios.get(`/wishList/wish/${id}`);
+      let { data } = await axios.get(`api/wishList/wish/${id}`);
       return await dispatch({
         type: GET_USER_WISH,
         payload: data,
@@ -65,7 +65,7 @@ export const userWishListGet = (id) => {
 export const userForgotPass = async (user) => {
   console.log("este es el user ", user);
   try {
-    let { data } = await axios.put("/forgotPassword", user);
+    let { data } = await axios.put("api/forgotPassword", user);
     console.log("a ver que data me llega", data);
     return data;
   } catch (error) {
@@ -75,7 +75,7 @@ export const userForgotPass = async (user) => {
 
 export const userLogin = async (payload) => {
   try {
-    let { data } = await axios.post("/api/login", payload);
+    let { data } = await axios.post("api/login", payload);
     console.log("DATA:", data)
     if (data.token) {
       let token = data.token;
@@ -102,7 +102,7 @@ export const editUsers = async (userUpdate, id) => {
   console.log("este es el userUpdate de la action ", userUpdate);
   console.log("este es el id de la action ", id);
   try {
-    let { data } = await axios.put(`/edit/${id}`, userUpdate);
+    let { data } = await axios.put(`api/edit/${id}`, userUpdate);
     return data;
   } catch (err) {
     console.log("rompo en la action de editUsers", err);
@@ -112,7 +112,7 @@ export const editUsers = async (userUpdate, id) => {
 export const userNewPass = async (newPass, id) => {
   console.log("este es el user y la id ", newPass, id);
   try {
-    let { data } = await axios.put(`/newPassword/${id}`, newPass);
+    let { data } = await axios.put(`api/newPassword/${id}`, newPass);
     return data;
   } catch (err) {
     console.log("rompo en la action de newPass", err);
@@ -124,7 +124,7 @@ export const getUserId = (id) => {
     console.log("data de la action", id);
     try {
       console.log("estoy entrando al dispatch?");
-      let { data } = await axios.get(`/allUser/${id}`);
+      let { data } = await axios.get(`api/allUser/${id}`);
       return await dispatch({
         type: GET_USER_ID,
         payload: data,
@@ -138,9 +138,7 @@ export const getUserId = (id) => {
 export const getUsers = () => {
   return async (dispatch) => {
     try {
-      console.log("hola");
-      let nada = await axios.get("/allUser");
-      console.log("esto trae el back a la action", nada.data.users);
+      let nada = await axios.get("api/allUser");
       return await dispatch({
         type: GET_USERS,
         payload: nada.data.users,

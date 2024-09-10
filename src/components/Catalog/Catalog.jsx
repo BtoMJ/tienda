@@ -23,8 +23,8 @@ import {
 import { getBrands } from "../../redux/brand/brandActions";
 import { getCategories } from "../../redux/category/categoriesActions";
 import { getDiscounts } from "../../redux/discounts/discountsActions";
-import './Catalog.css';
 import Nav from '../Nav/Nav';
+import './Catalog.css';
 
 
 function Catalog(){
@@ -162,7 +162,6 @@ function Catalog(){
                        currProducts.map((product, index) => {
                          return (
                            product && (
-                            // <Button className='modal-btn-catalogue' onClick={handleOpen}>
                                 <Product
                                    id={product.id}
                                    image={product.image}
@@ -174,21 +173,8 @@ function Catalog(){
                                    onSale={product.onSale}
                                    discounts={product.Discounts}
                                    rate={4}
-                                   />
-                            //  <Link className="link-catalogue" to={`/catalog/${product.id}`} key={index}>
-                                //  <Product
-                                //    id={product.id}
-                                //    image={product.image}
-                                //    name={product.name}
-                                //    price={product.price}
-                                //    status={product.status}
-                                //    description={product.description}
-                                //    Sizes={product.Sizes}
-                                //    onSale={product.onSale}
-                                //    discounts={product.Discounts}
-                                //    rate={4}
-                                //  />
-                            //  </Link>
+                                   key={product.id}
+                                />
                            )
                          );
                      }) : 
@@ -196,22 +182,20 @@ function Catalog(){
                             currProducts2.map((product, index) => {
                                 return (
                                 product && (
-                                    <Link to={`/catalog/${product.id}`} key={index}>
-                                    {/* <div className="Shoes" key={index} data-tilt> */}
-                                        <Product
-                                            id={product.id}
-                                            image={product.image}
-                                            name={product.name}
-                                            price={product.price}
-                                            status={product.status}
-                                            description={product.description}
-                                            Sizes={product.Sizes}
-                                            onSale={product.onSale}
-                                            discounts={product.Discounts} 
-                                        />
-                                    {/* </div> */}
-                                    </Link>)
-                                );
+                                    <Product
+                                        id={product.id}
+                                        image={product.image}
+                                        name={product.name}
+                                        price={product.price}
+                                        status={product.status}
+                                        description={product.description}
+                                        Sizes={product.Sizes}
+                                        onSale={product.onSale}
+                                        discounts={product.Discounts} 
+                                        key={product.id}
+                                    />
+                                )
+                            );
                         }) 
                     }
                     <div className="Paginado">

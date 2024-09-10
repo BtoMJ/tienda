@@ -1,5 +1,44 @@
 @media (320px <= width <= 480px){
 
+    .catalog-container .product-container{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 10vh;
+    }
+    
+    .catalog-container .product-container .top-bar{
+        display: none;
+    }
+
+    .select-catalogue{
+        width: 100%;
+        padding: 7px 20px 7px 10px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        outline: none;
+        border-color: rgb(204, 204, 204);
+        cursor: pointer;
+        transition: .3s all ease-in-out;
+    }
+
+    .select-catalogue:hover{
+        border-color: #FFF;
+        box-shadow: 0 5px 10px #00000030;
+    }
+
+    .catalog-container .product-container .shoes{
+        width: 100vw;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
 }
 
 @media (481px <= width <= 768px){

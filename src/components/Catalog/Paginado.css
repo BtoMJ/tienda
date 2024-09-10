@@ -15,6 +15,7 @@
 
 .PageCurrent{
     color: #f00;
+    font-weight: bold;
     border-bottom: solid 2px #f00;
 }
 
@@ -22,6 +23,29 @@
     padding: 5px;
     color: #000;
     font-weight: bold;
+}
+
+@media (320px <= width <= 480px){
+
+    .Page{
+        width: 20px;
+        height: 25px;
+        text-align: center;
+        float: left;
+        margin: 0 5px;
+    }
+    
+    .Number{
+        font-size: 1.5rem;
+        padding: 5px;
+        color: #000000;
+        font-weight: 500;
+    }
+    
+    .PageCurrent{
+        font-size: 1rem;
+    }
+    
 }
 
 @media (min-width: 1400px){
@@ -43,9 +67,6 @@
     
     .PageCurrent{
         font-size: 17px;
-        color: #f00;
-        font-weight: bold;
-        border-bottom: solid 2px #f00;
     }
 
 }
@@ -70,9 +91,6 @@
     
     .PageCurrent{
         font-size: 16px;
-        color: #f00;
-        font-weight: bold;
-        border-bottom: solid 2px #f00;
     }
 
 }
@@ -97,9 +115,6 @@
     
     .PageCurrent{
         font-size: 14px;
-        color: #f00;
-        font-weight: bold;
-        border-bottom: solid 2px #f00;
     }
 
 }
@@ -123,9 +138,6 @@
     
     .PageCurrent{
         font-size: 14px;
-        color: #f00;
-        font-weight: bold;
-        border-bottom: solid 2px #f00;
     }
 
 }
@@ -149,9 +161,6 @@
     
     .PageCurrent{
         font-size: 14px;
-        color: #f00;
-        font-weight: bold;
-        border-bottom: solid 2px #f00;
     }
     
 }

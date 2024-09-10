@@ -6,7 +6,7 @@ export const POST_CATEGORIE = "POST_CATEGORIE";
 
 export function getCategories() {
     return async (dispatch) => {
-        const categories = await axios.get('http://localhost:3001/api/Categories')
+        const categories = await axios.get('api/Categories')
         return await dispatch({
             type: GET_CATEGORIES,
             payload: categories.data
@@ -16,7 +16,7 @@ export function getCategories() {
 }
 export function getCategoryById(id) {
     return async (dispatch) => {
-        const categories = await axios.get(`/Categories/${id}`)
+        const categories = await axios.get(`api/Categories/${id}`)
         return await dispatch({
             type: GET_CATEGORIE_BY_ID,
             payload: categories.data
@@ -25,10 +25,10 @@ export function getCategoryById(id) {
 
 }
 export async function postCategory(payload) {
-    const json = await axios.post(`/Categories/createCategory`, payload)
+    const json = await axios.post(`api/Categories/createCategory`, payload)
     return json
 }
 export async function PutCategory(payload) {
-    const json = await axios.put(`/Categories/editCategory`, payload)
+    const json = await axios.put(`api/Categories/editCategory`, payload)
     return json
 }
