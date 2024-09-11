@@ -22,14 +22,14 @@ export const ADD_PRODUCT_PHOTO = "ADD_PRODUCT_PHOTO";
 export function getProducts(dayDiscount) {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`api/products`);
+      const { data } = await axios.get("api/products");
       return await dispatch({
         type: GET_PRODUCTS,
         payload: data,
         dayDiscount,
       });
     } catch (error) {
-      console.log(error);
+      console.log("ESTE ES EL ERROR",error);
     }
   };
 }
@@ -139,6 +139,7 @@ export function filterBrand(payload) {
     }
   };
 }
+
 export function filterCategory(payload) {
   return async (dispatch) => {
     try {
@@ -211,6 +212,7 @@ export function cleanDetail(payload) {
     payload,
   };
 }
+
 export function getProductStockById(id) {
   return async (dispatch) => {
     try {
@@ -224,6 +226,7 @@ export function getProductStockById(id) {
     }
   };
 }
+
 export function getProductsByName(payload) {
   return async function (dispatch) {
     try {
@@ -237,6 +240,7 @@ export function getProductsByName(payload) {
     }
   };
 }
+
 export function getProductStockBySize(id, body) {
   return async (dispatch) => {
     try {
@@ -251,6 +255,7 @@ export function getProductStockBySize(id, body) {
     }
   };
 }
+
 export function PutProduct(payload) {
   return async () => {
     const { data } = axios.put(`api/products/updateProduct/`, payload);

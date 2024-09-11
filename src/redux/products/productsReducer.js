@@ -30,6 +30,7 @@ export const initialState = {
   dataFiltrada: {},
   productPhoto: [],
 };
+
 function productsReducer(state = initialState, action) {
   switch (action.type) {
     case GET_PRODUCTS: {
